@@ -9,7 +9,7 @@ public class Task4 {
     public static void main (String[] args){
         List<String> names = Arrays.asList("Nischal","Aishwarya","Ajay","Alina","Summit");
 
-        Predicate<String> startsWithA = e -> e.toLowerCase().startsWith("a") && e.length()>5 ;
+        Predicate<String> startsWithA = e -> e.toLowerCase().startsWith("a") && e.length()<=5 ;
 
         List<String> result = names.stream()
                 .filter(e -> startsWithA.test(e))
